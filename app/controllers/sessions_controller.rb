@@ -11,6 +11,6 @@ class SessionsController < ApplicationController
                        action: 'new') if !params[:name] || params[:name].empty?
     session[:name] = params[:name]
     redirect_to '/'
-  end 
+  end
 
 end
