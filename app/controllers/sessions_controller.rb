@@ -13,4 +13,11 @@ class SessionsController < ApplicationController
     redirect_to '/'
   end
 
+  def destroy
+    return redirect_to(controller: 'sessions',
+                        action: 'new') if !params[:name] || params[:name].empty?
+    session.delete :name
+    redirect_to '/'
+  end
+
 end
