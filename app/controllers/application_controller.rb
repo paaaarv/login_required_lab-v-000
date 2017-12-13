@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     if params[:name] == nil
-      redirect_to '/login'
+      return nil
     else
       session[:name] = params[:name]
       return session[:name]
