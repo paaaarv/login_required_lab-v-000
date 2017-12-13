@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
 
   def current_user
-    if !params[:name] == nil
+    if !params[:name] == nil || params[:name].empty?
       session[:name] = params[:name]
       return session[:name]
     end
