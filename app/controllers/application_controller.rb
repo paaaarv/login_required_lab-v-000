@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
     if !params[:name] == nil
       session[:name] = params[:name]
       return session[:name]
-    end
+      end
   end
 end
